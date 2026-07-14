@@ -286,8 +286,8 @@ export default function Dashboard() {
           className="flex flex-col md:flex-row md:items-center justify-between gap-4"
         >
           <div>
-            <h1 className="text-3xl font-bold text-white">Dashboard Monitoring Kelembapan Tanah</h1>
-            <p className="text-muted-foreground mt-1">AgroConnect IoT - ESP32 Soil Monitoring</p>
+            <h1 className="text-3xl font-bold text-white">AgroConnect</h1>
+            <p className="text-muted-foreground mt-1">Dashboard Monitoring Kelembapan Tanah - ESP32 IoT</p>
           </div>
           <div className="flex items-center gap-3">
             <div className={`flex items-center gap-2 px-4 py-2 rounded-full border ${
@@ -334,8 +334,8 @@ export default function Dashboard() {
               label: "Kelembapan Tanah",
               value: `${data?.moisture ?? 0}%`,
               icon: Droplets,
-              color: "text-cyan-500",
-              bg: "bg-cyan-500/10",
+              color: "text-emerald-500",
+              bg: "bg-emerald-500/10",
             },
             {
               label: "Status Sensor",
@@ -397,7 +397,7 @@ export default function Dashboard() {
             <Card className="border-0 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Sprout className="w-5 h-5 text-cyan-500" />
+                  <Sprout className="w-5 h-5 text-emerald-500" />
                   Rekomendasi Otomatis
                 </CardTitle>
               </CardHeader>
@@ -428,7 +428,7 @@ export default function Dashboard() {
             <Card className="border-0 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Activity className="w-5 h-5 text-cyan-500" />
+                  <Activity className="w-5 h-5 text-emerald-500" />
                   Riwayat Kelembapan (20 Data Terakhir)
                 </CardTitle>
                 <CardDescription className="text-muted-foreground">
@@ -442,8 +442,8 @@ export default function Dashboard() {
                       <AreaChart data={history}>
                         <defs>
                           <linearGradient id="colorMoisture" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#06b6d4" stopOpacity={0.3} />
-                            <stop offset="95%" stopColor="#06b6d4" stopOpacity={0} />
+                            <stop offset="5%" stopColor="#10b981" stopOpacity="0.3" />
+                            <stop offset="95%" stopColor="#10b981" stopOpacity="0" />
                           </linearGradient>
                         </defs>
                         <CartesianGrid strokeDasharray="3 3" stroke="#27272a" vertical={false} />
@@ -468,7 +468,7 @@ export default function Dashboard() {
                         />
                         <Tooltip
                           contentStyle={{ backgroundColor: "#111827", border: "1px solid #27272a", borderRadius: "8px" }}
-                          itemStyle={{ color: "#06b6d4" }}
+                          itemStyle={{ color: "#10b981" }}
                           labelFormatter={(time) => {
                             try {
                               return parseSQLiteDate(time).toLocaleString("id-ID");
@@ -480,7 +480,7 @@ export default function Dashboard() {
                         <Area
                           type="monotone"
                           dataKey="moisture"
-                          stroke="#06b6d4"
+                          stroke="#10b981"
                           strokeWidth={3}
                           fillOpacity={1}
                           fill="url(#colorMoisture)"
@@ -509,7 +509,7 @@ export default function Dashboard() {
               <Card className="border-0 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Droplets className="w-5 h-5 text-cyan-500" />
+                    <Droplets className="w-5 h-5 text-emerald-500" />
                     Kondisi Tanah
                   </CardTitle>
                 </CardHeader>
@@ -549,14 +549,14 @@ export default function Dashboard() {
               <Card className="border-0 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Smartphone className="w-5 h-5 text-cyan-500" />
+                    <Smartphone className="w-5 h-5 text-emerald-500" />
                     Informasi Perangkat
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-muted-foreground text-sm">Nama Perangkat</span>
-                    <span className="font-medium">ESP32-DevKit</span>
+                    <span className="font-medium">AgroConnect Sensor Node</span>
                   </div>
                   <Separator />
                   <div className="flex items-center justify-between">
@@ -593,7 +593,7 @@ export default function Dashboard() {
             <Card className="border-0 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Terminal className="w-5 h-5 text-cyan-500" />
+                  <Terminal className="w-5 h-5 text-emerald-500" />
                   Aktivitas Terbaru
                 </CardTitle>
               </CardHeader>
@@ -646,7 +646,7 @@ export default function Dashboard() {
             <Card className="border-0 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Server className="w-5 h-5 text-cyan-500" />
+                  <Server className="w-5 h-5 text-emerald-500" />
                   Kesehatan Sistem
                 </CardTitle>
               </CardHeader>
